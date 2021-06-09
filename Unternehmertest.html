@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Unternehmertest.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="Unternehmertest.js"></script>
+
+    <script>
+        function testFunction() {
+            var checkboxStatus = document.getElementById("terms");
+
+            if (checkboxStatus.checked == true) {
+                calcResult()
+            } else {
+                document.getElementById("output").value = 'Stimmen Sie dem Datenschutz zu, um das Ergebnis zu sehen.';
+
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <form name="unternehmertest" id="unternehmertest" onsubmit="return calcResult()">
+            <div class="questions">
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Was ist Ihr Geschlecht?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question1" id="weiblich" value="weiblich" required
+                                checked="true" />
+                            <label for="weiblich" class="radio">weiblich</label></p>
+
+                        <p class="answer"><input type="radio" name="question1" id="männlich" value="männlich" />
+                            <label for="männlich" class="radio">männlich</label></p>
+
+                        <p class="answer"><input type="radio" name="question1" id="divers" value="divers" />
+                            <label for="divers" class="radio">divers</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Wie alt sind Sie?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question2" id="18" value="18" checked="true" />
+                            <label for="18" class="radio">18 - 24 Jahre</label></p>
+
+                        <p class="answer"><input type="radio" name="question2" id="25" value="25" />
+                            <label for="25" class="radio">25 - 34 Jahre</label></p>
+
+                        <p class="answer"><input type="radio" name="question2" id="35" value="35" />
+                            <label for="35" class="radio">35 - 44 Jahre</label></p>
+
+                        <p class="answer"><input type="radio" name="question2" id="45" value="45" />
+                            <label for="45" class="radio">45 - 54 Jahre</label></p>
+
+                        <p class="answer"><input type="radio" name="question2" id="55" value="55" />
+                            <label for="55" class="radio">55 - 64 Jahre</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Was ist Ihr höchster Bildungsabschluss?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question3" id="hauptschule" value="hauptschule"
+                                checked="true" />
+                            <label for="hauptschule" class="radio">Hauptschule</label></p>
+
+                        <p class="answer"><input type="radio" name="question3" id="realschule" value="realschule" />
+                            <label for="realschule" class="radio">Realschule</label></p>
+
+                        <p class="answer"><input type="radio" name="question3" id="hochschulreife" value="hochschulreife" />
+                            <label for="hochschulreife" class="radio">Allgemeine Hochschulreife</label></p>
+
+                        <p class="answer"><input type="radio" name="question3" id="ausbildung" value="ausbildung" />
+                            <label for="ausbildung" class="radio">Ausbildung</label></p>
+
+                        <p class="answer"><input type="radio" name="question3" id="bachelor" value="bachelor" />
+                            <label for="bachelor" class="radio">Bachelor</label></p>
+
+                        <p class="answer"><input type="radio" name="question3" id="master" value="master" />
+                            <label for="master" class="radio">Master</label></p>
+
+                        <p class="answer"><input type="radio" name="question3" id="promotion" value="promotion" />
+                            <label for="promotion" class="radio">Promotion</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Aus welcher Region kommen Sie?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question4" id="Baden-Württemberg" value="Baden-Württemberg"
+                                checked="true" />
+                            <label for="Baden-Württemberg" class="radio">Baden-Württemberg</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Bayern" value="Bayern" />
+                            <label for="Bayern" class="radio">Bayern</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Berlin" value="Berlin" />
+                            <label for="Berlin" class="radio">Berlin</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Brandenburg" value="Brandenburg" />
+                            <label for="Brandenburg" class="radio">Brandenburg</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Bremen" value="Bremen" />
+                            <label for="Bremen" class="radio">Bremen</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Hamburg" value="Hamburg" />
+                            <label for="Hamburg" class="radio">Hamburg</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Hessen" value="Hessen" />
+                            <label for="Hessen" class="radio">Hessen</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Mecklenburg-Vorpommern" value="Mecklenburg-Vorpommern" />
+                            <label for="Mecklenburg-Vorpommern" class="radio">Mecklenburg-Vorpommern</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Niedersachen" value="Niedersachen" />
+                            <label for="Niedersachen" class="radio">Niedersachen</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Nordrhein-Westfalen" value="Nordrhein-Westfalen" />
+                            <label for="Nordrhein-Westfalen" class="radio">Nordrhein-Westfalen</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Rheinland-Pfalz" value="Rheinland-Pfalz" />
+                            <label for="Rheinland-Pfalz" class="radio">Rheinland-Pfalz</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Saarland" value="Saarland" />
+                            <label for="Saarland" class="radio">Saarland</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Sachsen" value="Sachsen" />
+                            <label for="Sachsen" class="radio">Sachsen</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Sachsen-Anhalt" value="Sachsen-Anhalt" />
+                            <label for="Sachsen-Anhalt" class="radio">Sachsen-Anhalt</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Schleswig-Holstein" value="Schleswig-Holstein" />
+                            <label for="Schleswig-Holstein" class="radio">Schleswig-Holstein</label></p>
+
+                        <p class="answer"><input type="radio" name="question4" id="Thüringen" value="Thüringen" />
+                            <label for="Thüringen" class="radio">Thüringen</label></p>
+                    </div>
+                </div>
+
+                <!-- tvz = Triff voll zu | tez = Trifft eher zu | tenz = Trifft eher nicht zu | tgnz = Trifft gar nicht zu -->
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie möchten Ihr eigenes Unternehmen aufbauen und damit erfolgreich sein?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question5" id="tvz5" value="tvz" checked="true" />
+                            <label for="tvz5" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question5" id="tez5" value="tez" />
+                            <label for="tez5" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question5" id="tenz5" value="tenz" />
+                            <label for="tenz5" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question5" id="tgnz5" value="tgnz" />
+                            <label for="tgnz5" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie können andere von Ihren Ideen und Lösungen überzeugen und dadurch Vorhaben entscheidend
+                            beeinflussen?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question6" id="tvz6" value="tvz" checked="true" />
+                            <label for="tvz6" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question6" id="tez6" value="tez" />
+                            <label for="tez6" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question6" id="tenz6" value="tenz" />
+                            <label for="tenz6" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question6" id="tgnz6" value="tgnz" />
+                            <label for="tgnz6" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Veränderungen stehen Sie positiv gegenüber?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question7" id="tvz7" value="tvz" checked="true" />
+                            <label for="tvz7" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question7" id="tez7" value="tez" />
+                            <label for="tez7" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question7" id="tenz7" value="tenz" />
+                            <label for="tenz7" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question7" id="tgnz7" value="tgnz" />
+                            <label for="tgnz7" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Erfolg zu haben hat weniger etwas mit Glück als mit harter Arbeit zu tun?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question8" id="tvz8" value="tvz" checked="true" />
+                            <label for="tvz8" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question8" id="tez8" value="tez" />
+                            <label for="tez8" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question8" id="tenz8" value="tenz" />
+                            <label for="tenz8" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question8" id="tgnz8" value="tgnz" />
+                            <label for="tgnz8" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie stellen sich gerne neuen Herausforderungen?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question9" id="tvz9" value="tvz" checked="true" />
+                            <label for="tvz9" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question9" id="tez9" value="tez" />
+                            <label for="tez9" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question9" id="tenz9" value="tenz" />
+                            <label for="tenz9" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question9" id="tgnz9" value="tgnz" />
+                            <label for="tgnz9" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Als Unternehmer/in wären Sie bereit, Ihre Arbeiteszeiten an die Auftragslage anzupassen und
+                            falls nötig auch mehr als 40 Stunden pro Woche zu arbeiten?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question10" id="tvz10" value="tvz" checked="true" />
+                            <label for="tvz10" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question10" id="tez10" value="tez" />
+                            <label for="tez10" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question10" id="tenz10" value="tenz" />
+                            <label for="tenz10" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question10" id="tgnz10" value="tgnz" />
+                            <label for="tgnz10" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie übernehmen gerne Verantwortung für ein Projekt oder eine Aufgabe?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question11" id="tvz11" value="tvz" checked="true" />
+                            <label for="tvz11" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question11" id="tez11" value="tez" />
+                            <label for="tez11" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question11" id="tenz11" value="tenz" />
+                            <label for="tenz11" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question11" id="tgnz11" value="tgnz" />
+                            <label for="tgnz11" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Auch wenn viele Aufgaben gleichzeitig zu erledigen sind und Sie unter Zeitdruck stehen: Sie
+                            verlieren nicht so leicht die Nerven und schaffe es, Ihre Aufgaben zu erledigen?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question12" id="tvz12" value="tvz" checked="true" />
+                            <label for="tvz12" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question12" id="tez12" value="tez" />
+                            <label for="tez12" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question12" id="tenz12" value="tenz" />
+                            <label for="tenz12" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question12" id="tgnz12" value="tgnz" />
+                            <label for="tgnz12" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie sind bereit, das Risiko einzugehen, in der ersten Zeit nach der Unternehmensgründung
+                            kein regelmäßiges und stabiles Einkommen zu erzielen?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question13" id="tvz13" value="tvz" checked="true" />
+                            <label for="tvz13" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question13" id="tez13" value="tez" />
+                            <label for="tez13" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question13" id="tenz13" value="tenz" />
+                            <label for="tenz13" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question13" id="tgnz13" value="tgnz" />
+                            <label for="tgnz13" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Es gelingt Ihnen, effiziente Entscheidungen zu treffen - selbst dann, wenn die
+                            Informationslage nicht besonders gut ist?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question14" id="tvz14" value="tvz" checked="true" />
+                            <label for="tvz14" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question14" id="tez14" value="tez" />
+                            <label for="tez14" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question14" id="tenz14" value="tenz" />
+                            <label for="tenz14" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question14" id="tgnz14" value="tgnz" />
+                            <label for="tgnz14" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie sind überzeugt, dass Sie die Fähigkeit habe, Schwierigkeiten zu überwinden und Ihre
+                            Ziele zu erreichen?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question15" id="tvz15" value="tvz" checked="true" />
+                            <label for="tvz15" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question15" id="tez15" value="tez" />
+                            <label for="tez15" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question15" id="tenz15" value="tenz" />
+                            <label for="tenz15" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question15" id="tgnz15" value="tgnz" />
+                            <label for="tgnz15" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie gehen lieber ein kalkulierbares Risiko ein als jedesmal das Gleiche zu machen?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question16" id="tvz16" value="tvz" checked="true" />
+                            <label for="tvz16" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question16" id="tez16" value="tez" />
+                            <label for="tez16" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question16" id="tenz16" value="tenz" />
+                            <label for="tenz16" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question16" id="tgnz16" value="tgnz" />
+                            <label for="tgnz16" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Egal, ob im Beruf oder privat. Sie entwickeln gerne neue Ideen und initiieren aktive
+                            Veränderungen?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question17" id="tvz17" value="tvz" checked="true" />
+                            <label for="tvz17" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question17" id="tez17" value="tez" />
+                            <label for="tez17" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question17" id="tenz17" value="tenz" />
+                            <label for="tenz17" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question17" id="tgnz17" value="tgnz" />
+                            <label for="tgnz17" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Schnelle Entscheidungen zu treffen fällt Ihnen leicht?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question18" id="tvz18" value="tvz" checked="true" />
+                            <label for="tvz18" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question18" id="tez18" value="tez" />
+                            <label for="tez18" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question18" id="tenz18" value="tenz" />
+                            <label for="tenz18" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question18" id="tgnz18" value="tgnz" />
+                            <label for="tgnz18" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie können Chancen und Risiken gut einschätzen und auch mit Unsicherheiten gut umgehen?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question19" id="tvz19" value="tvz" checked="true" />
+                            <label for="tvz19" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question19" id="tez19" value="tez" />
+                            <label for="tez19" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question19" id="tenz19" value="tenz" />
+                            <label for="tenz19" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question19" id="tgnz19" value="tgnz" />
+                            <label for="tgnz19" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie bevorzugen es etablierte, festgefahrene Strukturen zu durchbrechen auch wenn es von der
+                            Norm abweicht?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question20" id="tvz20" value="tvz" checked="true" />
+                            <label for="tvz20" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question20" id="tez20" value="tez" />
+                            <label for="tez20" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question20" id="tenz20" value="tenz" />
+                            <label for="tenz20" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question20" id="tgnz20" value="tgnz" />
+                            <label for="tgnz20" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Ändert sich eine Situation, fällt es Ihnen in der Regel leicht, Ihre Pläne und Strategien
+                            entsprechend anzupassen?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question21" id="tvz21" value="tvz" checked="true" />
+                            <label for="tvz21" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question21" id="tez21" value="tez" />
+                            <label for="tez21" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question21" id="tenz21" value="tenz" />
+                            <label for="tenz21" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question21" id="tgnz21" value="tgnz" />
+                            <label for="tgnz21" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Ungewöhnliche und innovative Arten der Problemlösung probieren Sie gerne aus?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question22" id="tvz22" value="tvz" checked="true" />
+                            <label for="tvz22" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question22" id="tez22" value="tez" />
+                            <label for="tez22" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question22" id="tenz22" value="tenz" />
+                            <label for="tenz22" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question22" id="tgnz22" value="tgnz" />
+                            <label for="tgnz22" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie suchen stets nach neuen Möglichkeiten Prozesse automatisiert und digital abzubilden?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question23" id="tvz23" value="tvz" checked="true" />
+                            <label for="tvz23" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question23" id="tez23" value="tez" />
+                            <label for="tez23" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question23" id="tenz23" value="tenz" />
+                            <label for="tenz23" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question23" id="tgnz23" value="tgnz" />
+                            <label for="tgnz23" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie versuchen Veränderungen stets eigeninitiativ zu initiieren?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question24" id="tvz24" value="tvz" checked="true" />
+                            <label for="tvz24" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question24" id="tez24" value="tez" />
+                            <label for="tez24" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question24" id="tenz24" value="tenz" />
+                            <label for="tenz24" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question24" id="tgnz24" value="tgnz" />
+                            <label for="tgnz24" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie erkennen eine potenzielle Geschäftsoption?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question25" id="tvz25" value="tvz" checked="true" />
+                            <label for="tvz25" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question25" id="tez25" value="tez" />
+                            <label for="tez25" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question25" id="tenz25" value="tenz" />
+                            <label for="tenz25" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question25" id="tgnz25" value="tgnz" />
+                            <label for="tgnz25" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie können andere Menschen von sich und Ihren Ideen überzeugen und ein Team motivieren?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question26" id="tvz26" value="tvz" checked="true" />
+                            <label for="tvz26" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question26" id="tez26" value="tez" />
+                            <label for="tez26" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question26" id="tenz26" value="tenz" />
+                            <label for="tenz26" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question26" id="tgnz26" value="tgnz" />
+                            <label for="tgnz26" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sie sind davon überzeugt, dass Menschen bereit sind, für Ihr Produkt bzw. Dienstleistung
+                            Geld auszugeben?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question27" id="tvz27" value="tvz" checked="true" />
+                            <label for="tvz27" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question27" id="tez27" value="tez" />
+                            <label for="tez27" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question27" id="tenz27" value="tenz" />
+                            <label for="tenz27" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question27" id="tgnz27" value="tgnz" />
+                            <label for="tgnz27" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Ihre Geschäftsidee hat das Potential, Probleme oder Bedürfnisse von anderen zu lösen?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question28" id="tvz28" value="tvz" checked="true" />
+                            <label for="tvz28" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question28" id="tez28" value="tez" />
+                            <label for="tez28" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question28" id="tenz28" value="tenz" />
+                            <label for="tenz28" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question28" id="tgnz28" value="tgnz" />
+                            <label for="tgnz28" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="questionTitle">
+                        <p>Sind Sie ein guter Netzwerker?</p>
+                    </div>
+                    <div class="questionBody">
+                        <p class="answer"><input type="radio" name="question29" id="tvz29" value="tvz" checked="true" />
+                            <label for="tvz29" class="radio">Trifft voll zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question29" id="tez29" value="tez" />
+                            <label for="tez29" class="radio">Trifft eher zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question29" id="tenz29" value="tenz" />
+                            <label for="tenz29" class="radio">Trifft eher nicht zu</label></p>
+
+                        <p class="answer"><input type="radio" name="question29" id="tgnz29" value="tgnz" />
+                            <label for="tgnz29" class="radio">Trifft gar nicht zu</label></p>
+                    </div>
+                </div>
+            </div>
+
+            <label class="checkbox" for="terms" id="checkbox">
+                <input class="checkbox__input" type="checkbox" name="terms" id="terms" onchange="activateButton(this)" required>
+                <div class="checkbox__box"></div>
+                <p class="vlabtxt" style="display: inline">Ich stimme zu, dass meine Angaben erhoben und verarbeitet
+                    werden. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer
+                    Datenschutzerklärung.</p>
+            </label>
+            <br><br>
+
+
+            <div class="output" id="output1">
+                    <output class="vlabtxt-warning" id="output"></output>
+            </div>
+
+            <div class="submitBTN">
+                <input type="button" name="submit" value="Ergebnis anzeigen" id="submitButton" onclick="testFunction()" class="link link-two shrink-on-hover">
+            </div>
+            
+        </form>
+        <div class="resulttext">
+            <p id="result"></p>
+            <p id="result2"></p>
+        </div>
+        <div class="furtherSteps">
+            <p id="furtherText"></p>
+            <input type="button" name="furtherInfo" value="Mehr erfahren" id="furtherInfoButton" onclick="location.href='/beratung/'" class="link link-two shrink-on-hover">
+        </div>
+
+</html>
